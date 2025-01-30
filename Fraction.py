@@ -8,7 +8,11 @@ class Fraction(object):
         
         self.numerator = numerator
         self.denominator = denominator
-        self.fraction = numerator
+        
+        try: 
+            fraction = numerator/denominator
+        except ZeroDivisionError:
+            print("Error: Cannot divide by zero.")
         
         pass
 
