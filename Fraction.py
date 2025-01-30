@@ -5,10 +5,18 @@ class Fraction(object):
         # Initialize denominator and numerator values```
         # can divide a string with rational numbers into two from '/'
         # `
-        
-        self.numerator = numerator
-        self.denominator = denominator
-        
+        if isinstance(numerator, str):
+            tempValues = numerator.text.split('/')
+            self.numerator = int(tempValues[0])
+            self.denominator = int(tempValues[1])
+
+        elif isinstance(numerator, float) or isinstance(denominator, float):
+            raise ValueError("ValueError: numbers cannot be float values")
+
+        elif isinstance(numerator, int) and isinstance(denominator, int):
+            self.numerator = numerator
+            self.denominator = denominator
+
         try: 
             fraction = numerator/denominator
         except ZeroDivisionError:
