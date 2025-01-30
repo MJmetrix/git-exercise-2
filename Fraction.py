@@ -1,11 +1,22 @@
 class Fraction(object):
 
     def __init__(self, numerator=0, denominator=1):
-        #TODO
+        # TODO
+        # Initialize denominator and numerator values```
+        # can divide a string with rational numbers into two from '/'
+        # `
+        
+        self.numerator = numerator
+        self.denominator = denominator
+        self.fraction = numerator
+        
         pass
 
     def gcd(a, b):
         #TODO
+        #''
+        # '
+
         pass
 
     def get_numerator(self):
@@ -18,4 +29,5 @@ class Fraction(object):
 
     def get_fraction(self):
         #TODO
+        return fraction
         pass
