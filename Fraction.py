@@ -1,14 +1,14 @@
 class Fraction(object):
 
     def __init__(self, numerator=0, denominator=1):
-        # TODO
-        # Initialize denominator and numerator values```
-        # can divide a string with rational numbers into two from '/'
-        # `
+        
         if isinstance(numerator, str):
-            tempValues = numerator.text.split('/')
-            self.numerator = int(tempValues[0])
-            self.denominator = int(tempValues[1])
+            try
+                tempValues = numerator.text.split('/')
+                self.numerator = int(tempValues[0])
+                self.denominator = int(tempValues[1])
+            except ValueError
+                print("ValueError: Values cannot be strings")
 
         elif isinstance(numerator, float) or isinstance(denominator, float):
             raise ValueError("ValueError: numbers cannot be float values")
@@ -20,7 +20,7 @@ class Fraction(object):
         try: 
             fraction = numerator/denominator
         except ZeroDivisionError:
-            print("Error: Cannot divide by zero.")
+            print("ZeroDivisionError: Cannot divide by zero.")
         
         pass
 
@@ -32,16 +32,16 @@ class Fraction(object):
         pass
 
     def get_numerator(self):
-        #TODO
+      
         return numerator
         pass
 
     def get_denominator(self):
-        #TODO
+       
         return denominator
         pass
 
     def get_fraction(self):
-        #TODO
+       
         return fraction
         pass
