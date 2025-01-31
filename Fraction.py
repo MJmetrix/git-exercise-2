@@ -3,7 +3,7 @@ class Fraction(object):
     def __init__(self, numerator=0, denominator=1):
         
         if isinstance(numerator, str):
-            try
+            try:
                 tempValues = numerator.text.split('/')
                 self.numerator = int(tempValues[0])
                 self.denominator = int(tempValues[1])
