@@ -7,7 +7,7 @@ class Fraction(object):
                 tempValues = numerator.text.split('/')
                 self.numerator = int(tempValues[0])
                 self.denominator = int(tempValues[1])
-            except ValueError
+            except ValueError:
                 print("ValueError: Values cannot be strings")
 
         elif isinstance(numerator, float) or isinstance(denominator, float):
