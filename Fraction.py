@@ -4,12 +4,12 @@ class Fraction(object):
         
         if isinstance(numerator, str):
             try:
-                tempValues = numerator.text.split('/')
+                tempValues = numerator.split("/")
                 self.numerator = int(tempValues[0])
                 self.denominator = int(tempValues[1])
             except ValueError:
                 print("ValueError: Values cannot be strings")
-
+                
         elif isinstance(numerator, float) or isinstance(denominator, float):
             raise ValueError("ValueError: numbers cannot be float values")
 
@@ -17,17 +17,26 @@ class Fraction(object):
             self.numerator = numerator
             self.denominator = denominator
 
-        try: 
-            fraction = numerator/denominator
-        except ZeroDivisionError:
-            print("ZeroDivisionError: Cannot divide by zero.")
+        if self.denominator == 0:
+            raise ZeroDivisionError("ZeroDivisionError: Cannot divide by zero.")
+        elif self.numerator == 0:
+            self.fraction_string = '0'
+        else:
+            self.divisor = self.gcd(self.numerator, self.denominator)
+            self.fraction_string = str(int(self.numerator/self.divisor)) + '/' + str(int(self.denominator/self.divisor))
         
+       
         pass
 
+    @staticmethod
     def gcd(a, b):
         #TODO
         #''
         # '
+      
+        while b:
+            a, b = b, a % b
+        return a
 
         pass
 
@@ -42,6 +51,6 @@ class Fraction(object):
         pass
 
     def get_fraction(self):
-       
-        return fraction
+        return self.fraction_string
         pass
+
