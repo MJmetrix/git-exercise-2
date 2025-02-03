@@ -44,6 +44,10 @@ class Fraction(object):
                 if a > b:
                     a = a - b
             return a
+        
+        else:
+            #TODO
+            return a
 
     def get_numerator(self):
       
