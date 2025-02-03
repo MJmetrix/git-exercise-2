@@ -53,15 +53,16 @@ class Fraction(object):
 
     def get_numerator(self):    
         
-        return numerator
+        return self.numerator
         pass
 
     def get_denominator(self):
        
-        return denominator
+        return self.denominator
         pass
 
     def get_fraction(self):
+        
         return self.fraction_string
         pass
 
