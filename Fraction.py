@@ -8,7 +8,6 @@ class Fraction(object):
                 self.numerator = int(tempValues[0])
                 self.denominator = int(tempValues[1])
             except ValueError:
-                print("ValueError: Values cannot be strings")
                 self.fraction_string = '0'
                 return
                 
@@ -20,8 +19,13 @@ class Fraction(object):
             self.numerator = numerator
             self.denominator = denominator
 
+        if self.denominator < 0:
+            self.numerator *= -1
+            self.denominator *= -1
+            
         if self.denominator == 0:
             raise ZeroDivisionError("ZeroDivisionError: Cannot divide by zero.")
+        
         elif self.numerator == 0:
             self.fraction_string = '0'
             return
@@ -29,7 +33,6 @@ class Fraction(object):
         else:
             self.divisor = self.gcd(self.numerator, self.denominator)
             self.fraction_string = str(int(self.numerator/self.divisor)) + '/' + str(int(self.denominator/self.divisor))
-        
        
         pass
 
