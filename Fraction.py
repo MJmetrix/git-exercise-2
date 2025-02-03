@@ -30,15 +30,16 @@ class Fraction(object):
 
     @staticmethod
     def gcd(a, b):
-        #TODO
+        #The Euclidean Algorithm is used to compute for the GCD.
         #''
-        # '
-      
-        while b:
-            a, b = b, a % b
+        # 
+        
+        while b != a:
+            if b > a:
+                b = b - a
+            if a > b:
+                a = a - b
         return a
-
-        pass
 
     def get_numerator(self):
       
