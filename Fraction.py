@@ -46,7 +46,7 @@ class Fraction(object):
         if b == 0 or a == 0:
             return 0
         
-        while b != a:
+        while b != 0:
             a = b
             b = a % b
         return a
