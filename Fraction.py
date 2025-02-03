@@ -39,10 +39,9 @@ class Fraction(object):
     @staticmethod
     @staticmethod
     def gcd(a, b):
-        #TODO
-        #''
-        # '
-      
+
+        #The Euclidean Algorithm is used to compute for the GCD.        
+        
         a = abs(a)
         b = abs(b)
         
@@ -50,28 +49,21 @@ class Fraction(object):
             return 0
         
         while b != a:
-            if b > a:
-                b = b - a
-            if a > b:
-                a = a - b
+            a = b
+            b = a % b
         return a
 
-    def get_numerator(self):
-      
-        return numerator
-      
+    def get_numerator(self):    
+        
         return numerator
         pass
 
     def get_denominator(self):
        
         return denominator
-       
-        return denominator
         pass
 
     def get_fraction(self):
-        return self.fraction_string
         return self.fraction_string
         pass
 
