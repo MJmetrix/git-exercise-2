@@ -39,10 +39,8 @@ class Fraction(object):
             return 0
         
         while b != a:
-            if b > a:
-                b = b - a
-            if a > b:
-                a = a - b
+            a = b
+            b = a % b
         return a
 
     def get_numerator(self):
