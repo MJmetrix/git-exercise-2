@@ -47,8 +47,7 @@ class Fraction(object):
             return 0
         
         while b != 0:
-            a = b
-            b = a % b
+            a, b = b, a % b
         return a
 
     def get_numerator(self):    
