@@ -37,6 +37,7 @@ class Fraction(object):
         pass
 
     @staticmethod
+    @staticmethod
     def gcd(a, b):
         #TODO
         #''
@@ -58,14 +59,21 @@ class Fraction(object):
     def get_numerator(self):
       
         return numerator
+      
+        return numerator
         pass
 
     def get_denominator(self):
+       
+        return denominator
        
         return denominator
         pass
 
     def get_fraction(self):
         return self.fraction_string
+        return self.fraction_string
         pass
+
+
 
