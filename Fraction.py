@@ -30,8 +30,10 @@ class Fraction(object):
 
     @staticmethod
     def gcd(a, b):
-        #The Euclidean Algorithm is used to compute for the GCD.        
-        
+        #TODO
+        #''
+        # '
+      
         a = abs(a)
         b = abs(b)
         
