@@ -35,8 +35,6 @@ class Fraction(object):
             self.fraction_string = str(int(self.numerator/self.divisor)) + '/' + str(int(self.denominator/self.divisor))
        
         pass
-
-    @staticmethod
     @staticmethod
     def gcd(a, b):
 
